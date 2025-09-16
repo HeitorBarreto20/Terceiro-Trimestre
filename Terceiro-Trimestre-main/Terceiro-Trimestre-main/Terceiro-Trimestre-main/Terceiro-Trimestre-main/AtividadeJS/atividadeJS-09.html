@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Temperatura</title>
+  <script>
+    function converterTemperatura() {
+      let celsius = prompt("Bota ai a temperatura em graus Celsius Portioles (°C):");
+      if (celsius === null || celsius.trim() === "" || isNaN(celsius)) {
+        document.getElementById("resultado").innerHTML = "Por favor, insira um valor numérico válido.";
+        return;
+      }
+      celsius = Number(celsius);
+      let kelvin = celsius + 273.15;
+      let fahrenheit = (celsius * 9/5) + 32;
+      document.getElementById("resultado").innerHTML = `
+        <p>A temperatura de ${celsius}°C corresponde a:</p>
+        <p><strong>${kelvin} K</strong></p>
+        <p><strong>${fahrenheit} °F</strong></p>
+      `;
+    }
+  </script>
+</head>
+<body>
+  <h2>Conversor de Temperatura</h2>
+  <button onclick="converterTemperatura()">Converter Temperatura</button>
+  <div id="resultado" style="margin-top: 15px;"></div>
+</body>
+</html>

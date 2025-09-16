@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade da Calculadora de Troco</title>
+
+    <style>
+        button {
+            padding: 20px;
+            background-color: yellow;
+            border-radius: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Supermercado Heitorcard</h1>
+
+    <button onclick="inicio()"> Comece Aqui! </button>
+
+     <script>
+        function inicio() {
+            let nome = window.prompt('Qual o seu nome?');
+            let produto = window.prompt(`Certo ${nome}! Agora diga-me, qual produto você escolheu?`);
+            let preço = window.prompt(`Ótima escolha! Agora me informe quanto custou o(a) ${produto}.`);
+            let pagamento = window.prompt(`Certo, agora quanto você ira usar para realizar o pagamento do(a) ${produto}?`);
+            let troco = pagamento - preço;
+            window.alert(`Certo, sabendo que o(a) ${produto} custa ${preço} e você dara ${pagamento} você receberá ${troco} de troco.`);
+        }
+     </script>
+
+</body>
+</html>

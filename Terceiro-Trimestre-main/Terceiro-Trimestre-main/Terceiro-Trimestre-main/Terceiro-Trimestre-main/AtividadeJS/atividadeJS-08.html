@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Distância</title>
+  <script>
+    function converterDistancia() {
+      let metros = prompt("Bote ai a distância em metronimos:");
+      if (metros === null || metros.trim() === "" || isNaN(metros)) {
+        alert("Por favor, insira um número válido.");
+        return;
+      }
+      metros = Number(metros);
+      let km = metros / 1000;
+      let hm = metros / 100;
+      let dam = metros / 10;
+      let dm = metros * 10;
+      let cm = metros * 100;
+      let mm = metros * 1000;
+      alert(`A distância de ${metros} metro(s) é a:\n
+      ${km} km
+      ${hm} hm
+      ${dam} dam
+      ${dm} dm
+      ${cm} cm
+      ${mm} mm`);
+    }
+  </script>
+</head>
+<body>
+  <h2>Conversor de Distância</h2>
+  <button onclick="converterDistancia()">Converter Distância</button>
+</body>
+</html>
